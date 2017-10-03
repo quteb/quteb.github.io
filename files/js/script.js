@@ -1,0 +1,139 @@
+// ----- Google Maps -------
+function initMap() {
+        var lawn = {lat: -27.477400, lng: 153.029349};
+        var map = new google.maps.Map(document.getElementById('map-canvas'), {
+          zoom: 17,
+          center: lawn,
+          gestureHandling: 'cooperative',
+          scrollwheel:  false,
+          styles: [{"featureType":"administrative.locality","elementType":"all","stylers":[{"hue":"#2c2e33"},{"saturation":7},{"lightness":19},{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"simplified"}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":-2},{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"hue":"#e9ebed"},{"saturation":-90},{"lightness":-8},{"visibility":"simplified"}]},{"featureType":"transit","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":10},{"lightness":69},{"visibility":"on"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":-78},{"lightness":67},{"visibility":"simplified"}]}]
+        });
+        var marker = new google.maps.Marker({
+          position: lawn,
+          map: map,
+          icon: './files/img/qut_eb_pin.png',
+          title: 'Kidney Lawn'
+        });
+
+}
+
+
+// ------ Scroll ------
+// Enables the click and scroll functionality
+$(document).ready(function (){
+    $("#go-home").click(function (){
+        $("#home").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+     $("#go-home2").click(function (){
+        $("#banner").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-about").click(function (){
+        $("#about").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-get-started").click(function (){
+        $("#get-started2").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-timetable").click(function (){
+        $("#timetablehead2").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-timetable-2").click(function (){
+        $("#timetablehead2").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-overview").click(function (){
+        $("#overview2").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-map").click(function (){
+        $("#map2").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-executives").click(function (){
+        $("#executives2").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-contact").click(function (){
+        $("#contact2").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-top").click(function (){
+        $("#banner").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    // ----  Popover settings  -----
+    $('a.session-box').click(function(e){
+        // Prevents scrolling to the top of the page when clicking a tag with href="#"
+        e.preventDefault();
+    });
+    //Enables popover when rel="popover"
+    $("[rel='tooltip']").tooltip();
+});
+
+
+//collapse the navbar upon selection from hamburger menu
+$(document).on('click','.navbar-collapse.in',function(e) {
+	if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+	    $(this).collapse('hide');
+	}
+});
+
+//Script to fade out the Carousel when scrolled past
+$(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    var height = ($(window).height() / 2); //1.7 previous
+    $('.top').css({
+        'opacity': ((height - scrollTop) / (height))
+    });
+    $('.bottom').css({
+        'opacity': ((height - scrollTop) / (height))
+    });
+});
+
+
+
+$(window).scroll(function() {
+  //Detect browser and disable fixed backgrounds if on Safari or IE/Edge
+    var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+    var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+    var is_edge_or_ie;    
+    
+    var ua = window.navigator.userAgent;
+    var trident = ua.indexOf('Trident/');
+    var edge = ua.indexOf('Edge/');
+    if (trident > 0 || edge > 0) {
+      is_edge_or_ie = true;
+    }
+    if ((is_chrome)&&(is_safari)) {
+      is_safari=false;
+    }
+    if($( window ).width() > 1000 && !is_safari && !is_edge_or_ie){
+      $('html').removeClass('touch');
+    }
+    else {
+      $('html').addClass('touch');
+    }
+    if ($(this).scrollTop() > 50) {                 
+      $('.navbar-default').addClass('smaller');
+      $('.navbar-default').addClass('solid');
+
+    } else {
+      $('.navbar-default').removeClass('smaller');
+      $('.navbar-default').removeClass('solid');
+    } 
+  });
