@@ -111,11 +111,11 @@ $(window).scroll(function() {
     if ((is_chrome)&&(is_safari)) {
       is_safari=false;
     }
-    if(!is_safari && !is_edge_or_ie){
-      $('html').removeClass('touch');
-    }
-    else {
+    if(is_safari || is_edge_or_ie){
       $('html').addClass('touch');
+    }
+    else{
+      $('html').removeClass('touch');
     }
     if ($(this).scrollTop() > 50) {                 
       $('.navbar-default').addClass('smaller');

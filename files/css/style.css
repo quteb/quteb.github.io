@@ -158,9 +158,6 @@
   padding: 30px;
   font-family: 'Shrikhand', cursive;
 }
-.fourth-block > .centered > .col-md-12 > .col-md-6 > .col-xs-4 {
-  padding: 0 0 0 0;
-}
 .fourth-block > .centered > .col-md-12 > .col-md-6 > .col-xs-12 {
   padding: 0 0 0 0;
 }
@@ -242,8 +239,9 @@ video {
   z-index: 10;
 }
 
-.img-circle {
+.img-square {
   margin-bottom: 5px;
+  border: 2px solid #00bdc2;
 }
 
 @keyframes kenburns {
@@ -335,7 +333,7 @@ p, .dashed > li, .list > li {
     .mobileBackground {
       display: block;
     }
-    .img-circle {
+    .img-square {
       width: 50px;
       height: 50px;
     }
@@ -377,7 +375,7 @@ p, .dashed > li, .list > li {
     .navbar-default .navbar-nav > li > a {
       text-align: left; 
     }
-    .img-circle {
+    .img-square {
       width: 60px;
       height: 60px;
     }
@@ -447,7 +445,7 @@ p, .dashed > li, .list > li {
     .navbar-default .navbar-nav > li > a:visited {
       color: black;
     }
-    .img-circle {
+    .img-square {
       width: 60px;
       height: 60px;
     }
@@ -478,13 +476,13 @@ p, .dashed > li, .list > li {
 and (max-device-width : 580px)
 and (max-device-height : 350px) 
 and (orientation : landscape){
-  .img-circle {
+  .img-square {
     width: 50px;
     height: 50px;
   }
 }
 @media screen and ( min-width: 400px ) and ( min-height: 650px) { /*for larger screen phones*/
-    .img-circle {
+    .img-square {
       width: 100px;
       height: 100px;
     }
@@ -492,7 +490,7 @@ and (orientation : landscape){
 @media only screen 
 and (max-device-width : 800px) 
 and (orientation : landscape){
-  .img-circle {
+  .img-square {
     width: 50px;
     height: 50px;
   }
@@ -501,7 +499,7 @@ and (orientation : landscape){
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
-  .img-circle {
+  .img-square {
     width: 100px;
     height: 100px;
   }
@@ -510,7 +508,7 @@ and (orientation : portrait) {
 and (min-device-width : 1024px) 
 and (max-device-width : 1366px) 
 and (orientation : portrait) {
-  .img-circle {
+  .img-square {
     width: 100px;
     height: 100px;
   }
@@ -534,7 +532,7 @@ and (orientation : portrait) {
   .navbar-default .navbar-nav > li > a {
     font-size: 16px;
   }
-  .img-circle {
+  .img-square {
     width: 120px;
     height: 120px;
   }
@@ -648,6 +646,9 @@ and (orientation : portrait) {
     .video_contain {
       display: block;
       background: rgba(17,51,90,.2);
+    }
+    .fourth-block > .centered > .col-md-12 > .col-md-6 > .col-xs-4 {
+      padding: 0 0 0 0;
     }
 }
 
@@ -885,7 +886,7 @@ body:before {
   background-size: cover;*/
 }
 
-body, .img-circle, .img-responsive, p, dd, h1, h2, h3, h4, .text-center, .col-lg-4 {
+body, .img-square, .img-responsive, p, dd, h1, h2, h3, h4, .text-center, .col-lg-4 {
   transition:all 1s ease-in-out; 
     -o-transition:all 1s ease-in-out; 
     -moz-transition:all 1s ease-in-out; 
