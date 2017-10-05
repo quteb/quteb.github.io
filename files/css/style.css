@@ -80,6 +80,25 @@
   overflow: hidden;
   vertical-align: top;
 }
+.banner{
+    -webkit-animation: bummer 0.5s;
+    animation: bummer 0.5s;
+    -webkit-transform: scale(0,0); 
+    transform: scale(0,0);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; /
+}
+@-webkit-keyframes bummer {
+    100% {
+        -webkit-transform: scale(1,1); 
+    }
+}
+
+@keyframes bummer {
+    100% {
+        transform: scale(1,1); 
+    }
+}
 .hex-right {
   position: absolute;
   top: 50px;
@@ -183,7 +202,7 @@ video {
   bottom: 0;
   z-index: 4;
   position: relative;
-  transform: scale(1.7, 1.7);
+  /*transform: scale(1.7, 1.7);*/
 }
 
 .video-container {
@@ -237,12 +256,12 @@ video {
   text-align: center;
   z-index: 10;
 }
-p {
+p, li {
   font-size: 17px !important;
 }
 .img-square {
   margin-bottom: 5px;
-  border: 2px solid #00bdc2;
+  border: 2px solid white;
 }
 
 @keyframes kenburns {
@@ -686,6 +705,15 @@ and (orientation : portrait) {
   }
 }
 
+@media screen and ( max-width: 1279px ) {
+    video {
+      -webkit-transform: scale(2.3, 2.3); 
+      -moz-transform: scale(2.3, 2.3);
+      transform: scale(2.3, 2.3);
+      transform: scale(2.3, 2.3);
+    }
+}
+
 @media screen and ( min-width: 1280px ) {
     video {
       -webkit-transform: scale(1.7, 1.7); 
@@ -905,7 +933,7 @@ body:before {
   background-size: cover;*/
 }
 
-body, .img-square, .img-responsive, p, dd, h1, h2, h3, h4, .text-center, .col-lg-4 {
+body, .img-square, .img-responsive, p, dd, h1, h2, h3, h4, .text-center {
   transition:all 1s ease-in-out; 
     -o-transition:all 1s ease-in-out; 
     -moz-transition:all 1s ease-in-out; 
