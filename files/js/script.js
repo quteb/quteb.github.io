@@ -130,3 +130,7 @@ $(window).scroll(function() {
 $('.jarallax').jarallax({
     speed: 0.2
 });
+
+$(document).ready(function () {
+    $('.banner.hidden').fadeIn(100).removeClass('hidden');
+});

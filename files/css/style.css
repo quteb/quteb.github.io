@@ -80,25 +80,6 @@
   overflow: hidden;
   vertical-align: top;
 }
-.banner{
-    -webkit-animation: bummer 0.5s;
-    animation: bummer 0.5s;
-    -webkit-transform: scale(0,0); 
-    transform: scale(0,0);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards; /
-}
-@-webkit-keyframes bummer {
-    100% {
-        -webkit-transform: scale(1,1); 
-    }
-}
-
-@keyframes bummer {
-    100% {
-        transform: scale(1,1); 
-    }
-}
 .hex-right {
   position: absolute;
   top: 50px;
@@ -124,6 +105,9 @@
   position: fixed;
   height: 100%;
   width: 100%;
+}
+.banner.hidden {
+  display: none;
 }
 .mobileBackground {
   height: 100%;
@@ -979,7 +963,6 @@ a.session-box:hover {
 }
 
 .img-responsive {
-  display:block;
     margin:auto;
 }
 #contact {
