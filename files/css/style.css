@@ -237,7 +237,9 @@ video {
   text-align: center;
   z-index: 10;
 }
-
+p {
+  font-size: 17px !important;
+}
 .img-square {
   margin-bottom: 5px;
   border: 2px solid #00bdc2;
@@ -372,9 +374,6 @@ p, .dashed > li, .list > li {
       font-size: 15px;
       font-weight: 800;
     }
-    p, dl, .dashed > li, .list > li {
-      font-size: 15px;
-    }
     .carousel-caption {
       top: 9%;
     }
@@ -438,9 +437,6 @@ p, .dashed > li, .list > li {
     .select {
       font-size: 15px;
       font-weight: 800;
-    }
-    p, dl, .dashed > li, .list > li {
-      font-size: 15px;
     }
     .carousel-caption {
       top: 9%;
@@ -616,9 +612,6 @@ and (orientation : portrait) {
   .select {
     font-size: 25px;
     font-weight: 400;
-  }
-  p, dl, .dashed > li, .list > li {
-    font-size: 17px;
   }
   .dl-horizontal dt {
    white-space: normal !important; 
@@ -1207,6 +1200,13 @@ a.session-box:hover {
   }
   .navbar-default.smaller > .container > #navbar > .nav {
     margin-right: 0%;
+  }
+  .img-responsive {
+    height: 50%;
+    width: 50%;
+  }
+  .top {
+    top: 17vh;
   }
 }
 @media all and (max-width: 479px) {
