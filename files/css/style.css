@@ -706,13 +706,14 @@ and (orientation : portrait) {
     background-image: url(../img/banner.jpg);
     background-position: 0% 0%;
     background-repeat: repeat-x;
-    background-color: rgba(255, 255, 255, 0.8) !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
   }
   #navbar {
-    background-color: rgba(255, 255, 255, 0.8) !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
   }
   .navbar-default .navbar-nav > li > a {
     text-align: right; 
+    color: #3EC1ED;
   } 
   .mobileBackground {
     display: block;
