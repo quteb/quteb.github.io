@@ -1235,6 +1235,13 @@ a.session-box:hover {
     .navbar-default.smaller .navbar-nav > li > a{
      line-height: 50px;
     }
+    .img-responsive {
+      height: 100%;
+      width: 100%;
+    }
+    .top {
+      top: 17vh;
+    }
 }
 
 
