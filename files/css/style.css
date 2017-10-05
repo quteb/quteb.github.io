@@ -804,7 +804,7 @@ dt > a,
 }
 
 #map-canvas {
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   display: block;
 }
@@ -1022,7 +1022,7 @@ a.session-box:hover {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   transition: all 0.5s ease 0s;
   background-image: url(../img/banner.jpg);
   background-position: 0% 0%;
@@ -1039,19 +1039,24 @@ a.session-box:hover {
 }
 
 .navbar-default .navbar-nav > .active {
-  color: #3EC1ED;
-}
-.navbar-default.smaller .navbar-nav > li > a {
   color: black;
 }
+.navbar-default.smaller .navbar-nav > li > a {
+  color: #3EC1ED;
+}
 .navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:focus {
+  -webkit-transition: color 0.6s;
+   -moz-transition: color 0.6s;
+  transition: color 0.6s;
+  color: #3EC1ED; 
+}
 .navbar-default.smaller .navbar-nav > li > a:hover,
 .navbar-default.smaller .navbar-nav > li > a:focus  {
-  -webkit-transition: all 0.6s;
-   -moz-transition: all 0.6s;
-  transition: all 0.6s;
-  color: #3EC1ED;
+  -webkit-transition: color 0.6s;
+   -moz-transition: color 0.6s;
+  transition: color 0.6s;
+  color: white;
 }
 .navbar-brand {
   padding: 0px;
