@@ -126,3 +126,7 @@ $(window).scroll(function() {
       $('.navbar-default').removeClass('solid');
     } 
 });
+
+$('.jarallax').jarallax({
+    speed: 0.2
+});
