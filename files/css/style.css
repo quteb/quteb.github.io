@@ -271,9 +271,10 @@ p, li {
   -webkit-transition:all 0.5s ease-in-out;
   padding: 10px 30px 10px 30px;
   background-color: transparent; 
-  color: #fff; 
+  color: #f39200; 
+  background-color: #fff; 
+  border: 2px solid black;
   font-family: 'Raleway', sans-serif; 
-  border: 2px solid white;
   border-radius: 0px;
 }
 
@@ -282,7 +283,7 @@ p, li {
 .select:active {
   background-color: #57b7ba; 
   color: white; 
-  border-color: white; 
+  border-color: black; 
   text-decoration: none;
   transition:all 0.5s ease-in-out; 
   -o-transition:all 0.5s ease-in-out; 
@@ -723,23 +724,6 @@ and (orientation : portrait) {
   }
 }
 @media screen and ( max-width: 1024px ) {
-  .select {
-    color: black; 
-    background-color: #fff; 
-    border: 2px solid black;
-  }
-  .select:hover, 
-  .select:focus, 
-  .select:active {
-    background-color: #57b7ba; 
-    color: black; 
-    border-color: black; 
-    text-decoration: none;
-    transition:all 0.5s ease-in-out; 
-    -o-transition:all 0.5s ease-in-out; 
-    -moz-transition:all 0.5s ease-in-out; 
-    -webkit-transition:all 0.5s ease-in-out;
-  }
   .mobileBackground {
     display: block;
   }
