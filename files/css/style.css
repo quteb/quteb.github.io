@@ -35,40 +35,6 @@
   color: #ffffff;
   font-family: 'Shrikhand', cursive;
 }
-
-/*Overview*/
-.fifth-block {
-  height: 100%;
-  margin: 0 auto;
-  position: relative;
-  z-index: 11;
-}
-
-/*Location*/
-.sixth-block {
-  height: 100%;
-  margin: 0 auto;
-  position: relative;
-  z-index: 11;
-}
-
-/*Executives*/
-.seventh-block {
-  height: 100%;
-  margin: 0 auto;
-  position: relative;
-  z-index: 11;
-  /*opacity: 0;*/
-}
-
-/*Contact*/
-.eighth-block {
-  height: 100%;
-  margin: 0 auto;
-  position: relative;
-  z-index: 11;
-  margin-bottom: 5%;
-}
 .empty-block {
   text-align: center;
   height: 100vh;
@@ -155,13 +121,15 @@
 .fb_link {
   margin-left: 5px;
 }
-.first-block, .second-block, .third-block {
+.first-block, .second-block, .third-block, .fourth-block {
   color: #ffffff;
   padding: 30px;
   font-family: 'Shrikhand', cursive;
 }
 .fourth-block > .centered > .col-md-12 > .col-md-6 > .col-xs-12 {
-  padding: 0 0 0 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
 }
 .offset {
   margin-top: 50px;
@@ -486,6 +454,13 @@ p, .dashed > li, .list > li {
     h1 {
       font-size: 35px;
     }
+    .pull-right {
+      margin-right: 150px;
+      margin-bottom: 20px;
+    }
+    .fourth-block {
+      padding: 0px;
+    }
 }
 @media only screen 
 and (max-device-width : 580px)
@@ -498,8 +473,8 @@ and (orientation : landscape){
 }
 @media screen and ( min-width: 400px ) and ( min-height: 650px) { /*for larger screen phones*/
     .img-square {
-      width: 100px;
-      height: 100px;
+      width: 70px;
+      height: 70px;
     }
 }
 @media only screen 
@@ -548,8 +523,8 @@ and (orientation : portrait) {
     font-size: 16px;
   }
   .img-square {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
   }
   .top {
     top: 15vh;
@@ -630,7 +605,9 @@ and (orientation : portrait) {
     padding-left: 50px;
   }
   .fourth-block > .centered > .col-md-12 {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
   }
   .fourth-block > .centered > .col-md-12 > .col-md-6 {
     padding-right: 0;
@@ -672,6 +649,9 @@ and (orientation : portrait) {
   .navbar-default .navbar-nav > li >a {
     color: white;
   }
+  .pull-right {
+    margin-right: 140px;
+  }
 }
 
 @media screen and ( min-width: 960px ) {
@@ -700,6 +680,9 @@ and (orientation : portrait) {
   video {
     height: auto;
     width: 100vw;
+  }
+  .pull-right {
+    margin-right: 68%;
   }
 }
 @media screen and ( max-width: 767px ) {
@@ -788,7 +771,7 @@ dt > a,
 }
 
 #map-canvas {
-  height: 60vh;
+  height: 68.5vh;
   width: 100%;
   display: block;
 }
@@ -978,6 +961,12 @@ a.session-box:hover {
   text-decoration: none;
   color: #fff;
 }
+.pad {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 /* Navbar */
 .navbar-default {
   -webkit-transition: all 0.6s;
@@ -1081,18 +1070,18 @@ a.session-box:hover {
 }
 .navbar-default .navbar-nav > li > a {
   line-height: 100px;
-  -webkit-transition: all 0.4s;
+ /* -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
-  transition: all 0.4s;
+  transition: all 0.4s;*/
 }
 .navbar-default.smaller {
     width: 100%;
     height: 70px !important;
 }
 .navbar-default > .container > #navbar > .nav {
-  -webkit-transition: all 0.4s;
+  -webkit-transition: color 0.4s;
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
