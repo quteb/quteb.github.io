@@ -30,6 +30,7 @@
   height: 100%;
   margin: 0 auto;
   background-color: #FF8300;
+  overflow: hidden;
   position: relative;
   z-index: 11;
   color: #ffffff;
@@ -66,6 +67,13 @@
   opacity: 0.5;
   z-index: 1;
   left: -2%;
+}
+.hex-left-2 {
+  position: absolute;
+  top: 150px;
+  opacity: 0.4;
+  z-index: 1;
+  left: -17%;
 }
 .fix {
   position: fixed;
@@ -162,7 +170,7 @@ video {
 
 .centered {
   width: 100%;
-  z-index: 10;
+  z-index: 20;
   display: inline-block;
   vertical-align: middle;
   color: #ffffff;
@@ -684,6 +692,9 @@ and (orientation : portrait) {
   .pull-right {
     margin-right: 68%;
   }
+  .hex-left-2 {
+    left: 0%;
+  }
 }
 @media screen and ( max-width: 767px ) {
   .navbar-default {
@@ -771,7 +782,6 @@ dt > a,
 }
 
 #map-canvas {
-  height: 68.5vh;
   width: 100%;
   display: block;
 }
@@ -936,6 +946,13 @@ a.session-box:hover {
 #contact {
     text-decoration: none;
     color: #fff;
+}
+.contact-padding h1 {
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+.contact-padding .col-md-12 {
+  z-index: 20;
 }
 .dont-break-out {
 

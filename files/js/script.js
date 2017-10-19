@@ -134,4 +134,5 @@ $('.jarallax').jarallax({
 
 $(document).ready(function () {
     $('.banner.hidden').fadeIn(100).removeClass('hidden');
+    $('#map-canvas').css("height", $('.fourth-block').height());
 });
