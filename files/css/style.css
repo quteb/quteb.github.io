@@ -150,7 +150,7 @@
   position: absolute;
   width: 100%;
   height: 100vh;
-  background: rgba(17,51,90,.2);
+  background: rgba(0,0,0,.2);
   background-image: url(../img/pattern.png);
   z-index: 5;
 }
@@ -444,7 +444,7 @@ p, .dashed > li, .list > li {
       margin-left: 20px;
     }
     .bottom {
-      top: 80vh;
+      top: 85vh;
     }
     .top {
       top: 25vh;
