@@ -121,6 +121,7 @@
   text-decoration: underline;
   color: white;
   font-family: 'Raleway', sans-serif;
+  transition: all 0.2s ease; 
 }
 .fb_icon {
   width: 25px;
