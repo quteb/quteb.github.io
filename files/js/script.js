@@ -93,6 +93,17 @@ $(window).scroll(function () {
     $('.bottom').css({
         'opacity': ((height - scrollTop) / (height))
     });
+    // $('.jarallax-container-1').css({
+    //     'z-index': 'unset !important'
+    // });
+    //  $('.jarallax').css({
+    //     'z-index': 'unset !important'
+    // });
+    $('.jarallax').removeAttr( 'style' );
+    document.getElementById('jarallax-container-0').style.zIndex="unset";
+    document.getElementById('jarallax-container-1').style.zIndex="unset";
+    document.getElementById('jarallax-container-2').style.zIndex="unset";
+    // $('.card-img').removeAttr( 'style' )
 });
 
 

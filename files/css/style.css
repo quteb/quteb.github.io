@@ -295,7 +295,7 @@ PARALLAX WINDOWS IF NEEDED
 .jarallax {
     position: relative;
     height: 50vh;
-    z-index: 10;
+    z-index: unset !important;
 }
 .jarallax > .jarallax-img {
     position: absolute;
