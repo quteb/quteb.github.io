@@ -979,6 +979,11 @@ a.session-box:hover {
   text-decoration: none;
   color: #fff;
 }
+
+.contact:focus, .contact:hover {
+  color: #23527c;
+  text-decoration: none;
+}
 .pad {
   text-align: center;
   padding-top: 20px;
