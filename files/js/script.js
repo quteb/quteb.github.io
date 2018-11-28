@@ -41,7 +41,17 @@ $(document).ready(function (){
             duration: 1000,
         });
     });
+    $("#go-membership2").click(function (){
+        $("#membership").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
     $("#go-events").click(function (){
+        $("#events").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-events2").click(function (){
         $("#events").velocity("scroll", { 
             duration: 1000,
         });
@@ -146,4 +156,33 @@ $('.jarallax').jarallax({
 $(document).ready(function () {
     $('.banner.hidden').fadeIn(100).removeClass('hidden');
     $('#map-canvas').css("height", $('.fourth-block').height());
+});
+
+$('.center').slick({
+  // centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 1,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ],
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000
 });

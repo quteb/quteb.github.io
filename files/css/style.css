@@ -134,6 +134,7 @@
   color: #ffffff;
   padding: 30px;
   font-family: 'Shrikhand', cursive;
+  overflow: hidden;
 }
 .fourth-block > .centered > .col-md-12 > .col-md-6 > .col-xs-12 {
     padding-left: 0;
@@ -207,6 +208,7 @@ video {
   z-index: 10;
   padding-bottom: 30px;
 }
+
 .top {
   position: absolute;
   display: table-cell;
@@ -215,6 +217,16 @@ video {
   height: 50%;
   text-align: center;
   z-index: 10;
+}
+
+.center-banner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.center-banner img {
+  width: 40%;
 }
 p, li {
   font-size: 17px !important;
@@ -294,7 +306,7 @@ PARALLAX WINDOWS IF NEEDED
 
 .jarallax {
     position: relative;
-    height: 50vh;
+    height: 60vh;
     z-index: unset !important;
 }
 .jarallax > .jarallax-img {
@@ -307,9 +319,96 @@ PARALLAX WINDOWS IF NEEDED
     z-index: 20;
 }
 
+.carousel-container {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  width: 100%;
+}
+.slider {
+  z-index: 20;
+  width: 100%;
+  position: relative;
+  height: 500px;
+  margin-bottom: -30px;
+  margin-top: 20px;
+  /*border: 2px solid white;*/
+}
+.slick-prev {
+    left: -25px;
+}
+
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: white;
+    opacity: 0;
+}
+
+.slick-next {
+  right: -70px;
+}
+
+.slick-next:before {
+    content: '→';
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.image-slider {
+  padding: 0 2px 0 2px;
+  position: relative;
+}
+.image-slider img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+
+.caption h3 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 2px;
+  padding: 10px;
+  border-bottom-left-radius: 20px; 
+  border-top-right-radius: 20px; 
+  background-color: rgba(0,0,0,0.5);
+}
+
 p, .dashed > li, .list > li {
   font-family: 'Raleway', sans-serif;
   z-index: 20;
+}
+
+.text-link {
+    color: white;
+    text-decoration: underline;
 }
 /* RESPONSIVE DIVS */
 
@@ -445,7 +544,7 @@ p, .dashed > li, .list > li {
       margin-left: 20px;
     }
     .bottom {
-      top: 85vh;
+      top: 87vh;
     }
     .top {
       top: 25vh;
@@ -597,7 +696,7 @@ and (orientation : portrait) {
     font-size: 25px;
   }
   .select {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
   }
   .dl-horizontal dt {
@@ -631,7 +730,7 @@ and (orientation : portrait) {
     display: inline-block;
   }
   .top {
-    top: 15vh;
+    top: 17vh;
   }
   .navbar-default .navbar-nav > li {
      margin-left: 0px; 
