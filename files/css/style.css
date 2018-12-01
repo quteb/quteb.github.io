@@ -17,6 +17,21 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/raleway/v12/1Ptrg8zYS_SKggPNwJYtWqhPAMif.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/raleway/v12/1Ptrg8zYS_SKggPNwJYtWqZPAA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 /* latin-ext */
 @font-face {
   font-family: 'Hammersmith One';
@@ -75,7 +90,6 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/*Carousel*/
 .first-block {
   margin: 0 auto;
   position: relative;
@@ -85,7 +99,6 @@
   z-index: 10;
 }
 
-/*About*/
 .second-block {
   height: 100%;
   margin: 0 auto;
@@ -94,16 +107,14 @@
   z-index: 11;
 }
 
-/*Events*/
 .third-block {
   height: 100%;
   margin: 0 auto;
-  margin-bottom: -40px;
+  margin-bottom: -60px;
   position: relative;
   background: #4358be;
 }
 
-/*Timetable*/
 .fourth-block {
   height: 100%;
   margin: 0 auto;
@@ -112,8 +123,8 @@
   position: relative;
   z-index: 11;
   color: #ffffff;
-  font-family: 'Shrikhand', cursive;
 }
+
 .empty-block {
   text-align: center;
   height: 100vh;
@@ -125,6 +136,13 @@
   overflow: hidden;
   vertical-align: top;
 }
+
+.first-block, .second-block, .third-block, .fourth-block {
+  color: #ffffff;
+  padding: 50px 10px 50px 10px;
+  overflow: hidden;
+}
+
 .hex-right {
   position: absolute;
   top: 50px;
@@ -137,7 +155,7 @@
   top: 50px;
   opacity: 0.6;
   z-index: 1;
-  right: -250px;
+  right: -300px;
 }
 .hex-left {
   position: absolute;
@@ -208,12 +226,6 @@
 .fb_link {
   margin-left: 5px;
 }
-.first-block, .second-block, .third-block, .fourth-block {
-  color: #ffffff;
-  padding: 50px 10px 50px 10px;
-  font-family: 'Shrikhand', cursive;
-  overflow: hidden;
-}
 .fourth-block > .centered > .col-md-12 > .col-md-6 > .col-xs-12 {
     padding-left: 0;
     padding-right: 0;
@@ -231,7 +243,6 @@
   width: 100%;
   height: 100vh;
   background: rgba(0,0,0,.2);
-  background-image: url(../img/pattern.png);
   z-index: 5;
 }
 
@@ -333,7 +344,7 @@ p, li {
   display: inline-block;
   text-decoration: none;
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: -1px;
   margin-bottom: 20px;
   transition:all 0.5s ease-in-out; 
   -o-transition:all 0.5s ease-in-out; 
@@ -344,7 +355,7 @@ p, li {
   color: #f39200; 
   background-color: #fff; 
   border: 2px solid black;
-  font-family: 'Raleway', sans-serif; 
+  font-family: 'Montserrat', sans-serif; 
   border-radius: 6px;
 }
 
@@ -468,7 +479,8 @@ PARALLAX WINDOWS IF NEEDED
 
 
 .caption h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -570,10 +582,6 @@ p, .dashed > li, .list > li {
     .noise_contain {
       display: block;
     }
-    .video_contain {
-      display: block;
-      background: rgba(17,51,90,.2);
-    }
     h1 {
       font-size: 25px;
     }
@@ -636,10 +644,6 @@ p, .dashed > li, .list > li {
     }
     .noise_contain {
       display: block;
-    }
-    .video_contain {
-      display: block;
-      background: rgba(17,51,90,.2);
     }
     h1 {
       font-size: 35px;
@@ -721,10 +725,6 @@ and (orientation : portrait) {
   }
   .noise_contain {
     display: block;
-  }
-  .video_contain {
-    display: block;
-    background: rgba(17,51,90,.2);
   }
   .navbar-nav {
     float: right;
@@ -823,10 +823,6 @@ and (orientation : portrait) {
   .noise_contain {
     display: block;
   }
-  .video_contain {
-    display: block;
-    background: rgba(17,51,90,.2);
-  }
   .fourth-block > .centered > .col-md-12 > .col-md-6 > .col-xs-4 {
     padding: 0 0 0 0;
   }
@@ -908,10 +904,6 @@ and (orientation : portrait) {
   }
 }
 @media screen and ( min-width: 1025px ) {
-  .video_contain {
-    background: rgba(17,51,90,.2);
-    background-image: url(../img/pattern.png);
-  }
   .mobileBackground {
     display: none;
   }
@@ -1137,6 +1129,14 @@ a.session-box:hover {
 }
 .contact-padding .col-md-12 {
   z-index: 20;
+}
+.contact-padding .col-md-12 .col-md-4 {
+  padding-top: 25px;
+  padding-left: 25px;
+  overflow: hidden;
+}
+.col-xs-6 {
+  padding: 0 0px 10px 0px;
 }
 .dont-break-out {
 
@@ -1451,9 +1451,6 @@ a.session-box:hover {
   video {
    transform: scale(1.0, 1.0); 
    left: -60%;
-  }
-  .col-xs-6 {
-    padding: 0 0px 10px 0px;
   }
   .caption {
     right: 0px;

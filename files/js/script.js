@@ -164,8 +164,9 @@ $(document).ready(function () {
 });
 
 $(window).resize(function () {
-    $('#map-canvas').css("height", $('.fourth-block').height());
+    $('#map-canvas').css("height", $('.fourth-block .col-md-12 .col-md-4').height());
 });
+
 $('.center').slick({
   // centerMode: true,
   centerPadding: '60px',
