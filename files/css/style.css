@@ -98,9 +98,9 @@
 .third-block {
   height: 100%;
   margin: 0 auto;
-  margin-bottom: -20px;
+  margin-bottom: -30px;
   position: relative;
-  background: #5471ff;
+  background: #4358be;
 }
 
 /*Timetable*/
@@ -1446,9 +1446,6 @@ a.session-box:hover {
   .slider {
     border-radius: 20px;
   }
-  .slick-slide {
-    left: -3px;
-  }
   .pull-right {
     margin-right: 110px;
   }
@@ -1468,6 +1465,12 @@ a.session-box:hover {
     /* right: 2px; */
     width: 100%;
     text-align: center;
+  }
+  .slick-slide {
+    overflow: hidden;
+  }
+  .image-slider img {
+    margin-left: -80%;
   }
 }
 
