@@ -171,7 +171,7 @@ $('.center').slick({
   centerPadding: '60px',
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: false
-  // autoplay: true,
-  // autoplaySpeed: 2000
+  // autoplay: false
+  autoplay: true,
+  autoplaySpeed: 2000
 });
