@@ -173,5 +173,13 @@ $('.center').slick({
   slidesToScroll: 1,
   // autoplay: false
   autoplay: true,
-  autoplaySpeed: 2000
+  autoplaySpeed: 1500
+});
+
+
+Pace.options.elements.selectors = ["video"];
+Pace.restart();
+Pace.on("done", function(){
+    $('.loading').fadeOut(200);
+    // Make sure that the header animation doesn't start until page load finishes
 });
