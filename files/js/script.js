@@ -8,12 +8,21 @@ function initMap() {
           disableDefaultUI: true,
           styles: [{"featureType":"administrative.locality","elementType":"all","stylers":[{"hue":"#2c2e33"},{"saturation":7},{"lightness":19},{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"simplified"}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":-2},{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"hue":"#e9ebed"},{"saturation":-90},{"lightness":-8},{"visibility":"simplified"}]},{"featureType":"transit","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":10},{"lightness":69},{"visibility":"on"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":-78},{"lightness":67},{"visibility":"simplified"}]}]
         });
+        
+        var contentString = '<p class="maps-info"><b>QUT Gardens Point</b></p>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
         var marker = new google.maps.Marker({
           position: lawn,
           map: map,
           icon: './files/img/qut_eb_pin.png',
-          title: 'Kidney Lawn'
+          title: 'QUT Gardens Point'
         });
+
+        infowindow.open(map, marker);
 
 }
 
@@ -26,7 +35,17 @@ $(document).ready(function (){
             duration: 1000,
         });
     });
-     $("#go-home2").click(function (){
+    $("#go-home2").click(function (){
+        $("#banner").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-home3").click(function (){
+        $("#banner").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-home4").click(function (){
         $("#banner").velocity("scroll", { 
             duration: 1000,
         });
@@ -160,11 +179,30 @@ $('.jarallax').jarallax({
 
 $(document).ready(function () {
     $('.banner.hidden').fadeIn(100).removeClass('hidden');
-    $('#map-canvas').css("height", $('.fourth-block').height());
+    if ($(window).width() < 479) {                 
+        $('#map-canvas').css("height", $('.fourth-block').height());
+        $('.fifth-block').css("height", $('.fourth-block').height() + 80);
+        $('.spacer-block').css("height", $('.fourth-block').height() + 80);
+    }
+    else {
+        $('#map-canvas').css("height", $('.fourth-block').height());
+        $('.fifth-block').css("height", $('.fourth-block').height() + 50);
+        $('.spacer-block').css("height", $('.fourth-block').height() + 50);
+    }
+
 });
 
 $(window).resize(function () {
-    $('#map-canvas').css("height", $('.fourth-block .col-md-12 .col-md-4').height());
+    if ($(window).width() < 479) {                 
+        $('#map-canvas').css("height", $('.fourth-block').height());
+        $('.fifth-block').css("height", $('.fourth-block').height() + 80);
+        $('.spacer-block').css("height", $('.fourth-block').height() + 80);
+    }
+    else {
+        $('#map-canvas').css("height", $('.fourth-block').height());
+        $('.fifth-block').css("height", $('.fourth-block').height() + 50);
+        $('.spacer-block').css("height", $('.fourth-block').height() + 50);
+    }
 });
 
 $('.center').slick({
@@ -183,4 +221,14 @@ Pace.restart();
 Pace.on("done", function(){
     $('.loading').fadeOut(200);
     // Make sure that the header animation doesn't start until page load finishes
+});
+
+// Show the map in fixed position once scrolled past 2000px
+$( window ).scroll(function() {
+  // If user didn't scroll 2000px set default z-index
+  if ($(this).scrollTop() < 2000) { 
+      $(".fifth-block" ).css( "z-index", -1);
+  } else {
+      $(".fifth-block" ).css( "z-index", 0);
+  }
 });

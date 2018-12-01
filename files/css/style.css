@@ -113,6 +113,7 @@
   margin-bottom: -60px;
   position: relative;
   background: #4358be;
+  z-index: 11;
 }
 
 .fourth-block {
@@ -123,6 +124,22 @@
   position: relative;
   z-index: 11;
   color: #ffffff;
+}
+
+.fifth-block {
+  height: 100%;
+  width: 100vw;
+  bottom: 0;
+  position: fixed;
+  background: #3b3b3b;
+  z-index: -1;
+}
+
+.spacer-block {
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
 }
 
 .empty-block {
@@ -143,6 +160,11 @@
   overflow: hidden;
 }
 
+.fifth-block .col-md-6 {
+  padding-top: 12px;
+  box-sizing: border-box;
+  height: 50px;
+}
 .hex-right {
   position: absolute;
   top: 50px;
@@ -215,16 +237,17 @@
 }
 .links {
   text-decoration: underline;
-  color: white;
   font-family: 'Raleway', sans-serif;
   transition: all 0.2s ease; 
 }
-.fb_icon {
+.icon {
   width: 25px;
   height: 25px;
 }
-.fb_link {
-  margin-left: 5px;
+.social_link {
+  margin-left: 10px;
+  color: #e7e7e7;
+  text-decoration: none; 
 }
 .fourth-block > .centered > .col-md-12 > .col-md-6 > .col-xs-12 {
     padding-left: 0;
@@ -399,7 +422,8 @@ PARALLAX WINDOWS IF NEEDED
 .jarallax {
     position: relative;
     height: 60vh;
-    z-index: unset !important;
+    /*z-index: unset !important;*/
+    z-index: 10 !important;
 }
 .jarallax > .jarallax-img {
     position: absolute;
@@ -959,7 +983,13 @@ dt > a,
   width: 100%;
   display: block;
 }
-
+.gm-ui-hover-effect {
+  opacity: 0;
+}
+.maps-info {
+  padding-left: 10px;
+  margin: -2px 0px -2px -2px;
+}
 .color-white {
   color: #ffffff;
 }
@@ -1131,11 +1161,13 @@ a.session-box:hover {
   z-index: 20;
 }
 .contact-padding .col-md-12 .col-md-4 {
-  padding-top: 25px;
   padding-left: 25px;
   overflow: hidden;
 }
-.col-xs-6 {
+.contact-padding .col-md-12 .col-md-4 .title {
+  margin-top: 45px;
+}
+.col-xs-3 {
   padding: 0 0px 10px 0px;
 }
 .dont-break-out {
@@ -1346,7 +1378,7 @@ a.session-box:hover {
   .pull-right {
     margin-right: 450px;
   }
-  .col-xs-6 {
+  .col-xs-3 {
     padding-bottom: 10px;
   }
   .contact-padding .col-md-12,
@@ -1467,6 +1499,25 @@ a.session-box:hover {
   }
   .image-slider img {
     margin-left: -80%;
+  }
+  .first-block, .second-block, .third-block, .fourth-block {
+    padding: 35px 10px 35px 10px;
+  }
+  .contact-padding .col-md-12 .col-md-4 .title {
+    margin-top: 45px;
+  }
+  .col-xs-3 {
+    width: 33.33333%;
+  }
+  .social_link {
+    display: none;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .fifth-block .col-md-6 {
+    padding-top: 15px;
   }
 }
 
