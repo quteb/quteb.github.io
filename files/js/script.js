@@ -163,6 +163,9 @@ $(document).ready(function () {
     $('#map-canvas').css("height", $('.fourth-block').height());
 });
 
+$(window).resize(function () {
+    $('#map-canvas').css("height", $('.fourth-block').height());
+});
 $('.center').slick({
   // centerMode: true,
   centerPadding: '60px',
