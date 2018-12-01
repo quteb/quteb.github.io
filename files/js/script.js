@@ -46,6 +46,11 @@ $(document).ready(function (){
             duration: 1000,
         });
     });
+    $("#go-membership3").click(function (){
+        $("#membership").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
     $("#go-events").click(function (){
         $("#events").velocity("scroll", { 
             duration: 1000,
@@ -163,6 +168,7 @@ $('.center').slick({
   centerPadding: '60px',
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000
+  autoplay: false
+  // autoplay: true,
+  // autoplaySpeed: 2000
 });
