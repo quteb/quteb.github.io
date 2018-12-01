@@ -98,6 +98,7 @@
 .third-block {
   height: 100%;
   margin: 0 auto;
+  margin-bottom: -20px;
   position: relative;
   background: #564ec8;
 }
@@ -836,10 +837,6 @@ and (orientation : portrait) {
   .navbar-default.smaller > .container > #navbar > .nav {
     margin-right: 0%;
   }
-  .navbar-default .navbar-nav > li >a {
-    color: white;
-    text-shadow: 1px 1px #3b3b3b;
-  }
   .pull-right {
     margin-right: 140px;
   }
@@ -1173,7 +1170,7 @@ a.session-box:hover {
 }
 .pad {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 0px;
   padding-bottom: 20px;
 }
 
@@ -1285,6 +1282,8 @@ a.session-box:hover {
   -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
+  text-shadow: 1px 1px #3b3b3b;
+
 }
 .navbar-default.smaller {
     width: 100%;
@@ -1358,6 +1357,9 @@ a.session-box:hover {
   }
   .jarallax {
     height: 40vh;
+  }
+  .center-banner img {
+    width: 70%;
   }
 }
  @media (max-width: 767px) {
@@ -1452,7 +1454,7 @@ a.session-box:hover {
   }
   video {
    transform: scale(1.0, 1.0); 
-   left: -30%;
+   left: -60%;
   }
   .col-xs-6 {
     padding: 0 0px 10px 0px;
