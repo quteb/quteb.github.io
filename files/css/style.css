@@ -1508,6 +1508,7 @@ a.session-box:hover {
   }
   .col-xs-3 {
     width: 33.33333%;
+    min-height: 200px;
   }
   .social_link {
     display: none;
@@ -1518,6 +1519,9 @@ a.session-box:hover {
   }
   .fifth-block .col-md-6 {
     padding-top: 15px;
+  }
+  .hex-left-2 {
+    right: -380px;
   }
 }
 
