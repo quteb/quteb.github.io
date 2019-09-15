@@ -189,6 +189,13 @@ $(document).ready(function () {
         $('.fifth-block').css("height", $('.fourth-block').height() + 50);
         $('.spacer-block').css("height", $('.fourth-block').height() + 50);
     }
+    if ($(this).scrollTop() < 2000) { 
+      $(".fifth-block" ).css( "z-index", -2);
+      $(".fix" ).css( "z-index", -1);
+    } else {
+      $(".fifth-block" ).css( "z-index", -1);
+      $(".fix" ).css( "z-index", -2);
+    }
 
 });
 
@@ -219,7 +226,7 @@ $('.center').slick({
 Pace.options.elements.selectors = ["video"];
 Pace.restart();
 Pace.on("done", function(){
-    $('.loading').fadeOut(200);
+    $('.loading').fadeOut(200);   
     // Make sure that the header animation doesn't start until page load finishes
 });
 
@@ -227,8 +234,10 @@ Pace.on("done", function(){
 $( window ).scroll(function() {
   // If user didn't scroll 2000px set default z-index
   if ($(this).scrollTop() < 2000) { 
-      $(".fifth-block" ).css( "z-index", -1);
+      $(".fifth-block" ).css( "z-index", -2);
+      $(".fix" ).css( "z-index", -1);
   } else {
-      $(".fifth-block" ).css( "z-index", 0);
+      $(".fifth-block" ).css( "z-index", -1);
+      $(".fix" ).css( "z-index", -2);
   }
 });
